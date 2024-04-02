@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "fa88ba5c-a5cb-4f04-995d-a6628fed7138",
+		"name": "GraphQlASSigment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31069711"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "singup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" : \"adel Elbamby\" ,\r\n    \"email\" : \"engadel987654321@gmail.com\" ,\r\n    \"password\" : \"adel\",\r\n    \"department\" : \"vaaaaa\" ,\r\n    \"cPassword\" : \"adel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/signUp",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "addbook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVuZ2FkZWw5ODc2NTQzMjFAZ21haWwuY29tIiwiaWQiOiI2NWY2ZDVhNTA1YTFmYWU4MWMwNGEwNmUiLCJyb2xlIjoiVXNlciIsImlhdCI6MTcxMDY3Njc5OCwiZXhwIjoxNzEzMjY4Nzk4fQ.U2MmQNGc-JOjByBvS1tJ5YJmktKARJUPqHAdtieacAc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/F:/Backend node js Route/setions/imaGE_test/1.jpg"
+								},
+								{
+									"key": "title",
+									"value": "adelbookadel",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "adelljj",
+									"type": "text"
+								},
+								{
+									"key": "publicationDate",
+									"value": "1/2/2020",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/book/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"book",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
